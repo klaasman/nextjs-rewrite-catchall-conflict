@@ -18,6 +18,17 @@ export default function Home() {
         client-side navigation.
       </p>
 
+      <p style={{ marginBottom: "2rem" }}>
+        <a
+          href="https://github.com/klaasman/nextjs-rewrite-catchall-conflict"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#0366d6" }}
+        >
+          View source code on GitHub →
+        </a>
+      </p>
+
       <p>Required conditions to reproduce:</p>
 
       <ul>
@@ -78,6 +89,24 @@ export default function Home() {
           error comes from httpstat.us as intended).
         </em>
       </p>
+
+      <div
+        style={{
+          backgroundColor: "#fff3cd",
+          border: "1px solid #ffeeba",
+          padding: "1rem",
+          borderRadius: "4px",
+          marginTop: "1rem",
+        }}
+      >
+        <strong>Update after Vercel deployment:</strong>
+        <p style={{ margin: "0.5rem 0" }}>
+          I discovered that this test case behaves differently on Vercel
+          compared to local development. While it works as expected locally
+          (following the rewrite rule), on Vercel it exhibits the same incorrect
+          routing behavior as Test Case #1.
+        </p>
+      </div>
     </div>
   );
 }
